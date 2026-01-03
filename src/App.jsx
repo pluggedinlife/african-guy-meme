@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div className="w-full min-h-screen gap-3 sm:gap-4 flex flex-col items-center justify-center bg-emerald-100 sm:bg-blue-100 md:bg-amber-100 px-4 py-6 sm:py-8">
-        <span className="text-lg sm:text-2xl font-bold text-center">
+        <span className="text-lg sm:text-2xl font-bold text-center text-gray-900">
           Most African guy meme
         </span>
         <div className="flex items-center justify-center">
