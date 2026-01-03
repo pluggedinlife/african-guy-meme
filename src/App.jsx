@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import ossasMeme from "./assets/ossas-meme.jpg";
+import one from "./assets/audio/1.mp3";
+import two from "./assets/audio/2.mp3";
+import three from "./assets/audio/3.mp3";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const playSound = (sound) => {
+    const audio = new Audio(sound);
+    audio.play();
+  };
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="w-full h-screen gap-3 flex flex-col items-center justify-center bg-amber-100">
+        <span className="text-2xl font-bold">Most African guy meme</span>
+        <div>
+          <img className="h-full w-auto" src={ossasMeme} alt="ossas-meme" />
+        </div>
+        <div className="flex gap-3">
+          <button
+            onClick={() => playSound(one)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
+          >
+            uvuvwevwevwe
+          </button>
+          <button
+            onClick={() => playSound(two)}
+            className="bg-green-500 text-white px-4 py-2 rounded-md cursor-pointer"
+          >
+            onyetenyevwe
+          </button>
+          <button
+            onClick={() => playSound(three)}
+            className="bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer"
+          >
+            ugwemubwem ossas
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
